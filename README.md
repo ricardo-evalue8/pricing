@@ -1,5 +1,5 @@
 # pricing
-Show pricing on your website
+This extension is a widget that will show pricing on your website.
 ![Bolt screenshot](https://github.com/ricardo-evalue8/pricing/blob/master/assets/screenshot1.png)
 
 Extension version

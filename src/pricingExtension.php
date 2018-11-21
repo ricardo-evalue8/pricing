@@ -27,21 +27,30 @@ use Bolt\Asset\Widget\Widget;
 class pricingExtension extends SimpleExtension
 {
 	protected function registerAssets()
-    {
+	{
 
-		$widget = new \Bolt\Asset\Widget\Widget();
-        $widget
+
+
+		$widget_pricing = new \Bolt\Asset\Widget\Widget();
+			$widget_pricing
             ->setZone('frontend')
-            ->setLocation('main')
+            ->setLocation('pricing')
             ->setCallback([$this, 'frontendButton'])
-        ;
-		
-        return [ $widget ];
-    }
-	
-	public function frontendButton()
-    {
+			;
 
-        return $this->renderTemplate('pricing.twig');
-    }
+			return [ $widget_pricing ];
+		}
+
+	public function frontendButton()
+	{
+		// review config array to twig
+		$config = $this->getConfig();
+		$context = [
+				'title' => [$config["title"]],
+				'description' => [$config["description"]],
+		];
+
+		//$config["title"]
+		return $this->renderTemplate('pricing.twig', $context);
+	}
 }
