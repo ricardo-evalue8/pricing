@@ -1,9 +1,9 @@
 {
     "name": "evalue8/pricing",
-    "description": "This extension is a widget that will show pricing on your website.",
+    "description": "This extension will show pricing as widget in your website.",
     "type": "bolt-extension",
 	"version": "1.0.0",
-    "keywords": ["widget", "pricing", "social"],
+    "keywords": ["theme", "pricing", "widget"],
     "require": {
         "bolt/bolt": "^3.0"
     },
