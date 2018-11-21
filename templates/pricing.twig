@@ -1,0 +1,52 @@
+{# pricing Extension #}
+
+
+{% setcontent pricing = "pricing/latest/3" %}
+{% if pricing %}
+
+<section id="pricing" class="emerald" style="padding: 50px 0;">
+	<div class="container">
+		<div class="row">
+
+		{% for Service in pricing %}
+		
+		
+			<div class="col-md-4 col-sm-6">
+				<div class="media">
+				
+					<div class="pull-left">
+						<div class="icon-md">
+						{% if Service.contentlink %}
+							<a href="{{ relative_path(Service.contentlink|e) }}" target="_blank">
+							<img style="height: 44px; width: 44px;" src="{{ Service.image|thumbnail(480, 480) }}" alt="&#13;{{ Service.title }} &#10; img">
+							</a>
+						{% else %}
+							<a style="cursor: default;">
+							<img style="height: 44px; width: 44px;" src="{{ Service.image|thumbnail(480, 480) }}" alt="&#13;{{ Service.title }} &#10; img">
+							</a>
+						{% endif %}
+						</div>
+					</div>
+					<div class="media-body">
+						{% if Service.contentlink %}
+							<a href="{{ relative_path(Service.contentlink|e) }}" target="_blank"><h3 class="media-heading" data-bolt-field="title">{{ Service.title }}</h3></a>
+						{% else %}	
+							<a style="cursor: default;"><h3 class="media-heading" data-bolt-field="title">{{ Service.title }}</h3></a>
+						{% endif %}
+						<p>{{ Service.text }}</p>
+
+					</div>
+				</div>
+				
+			</div><!--/.col-md-4-->
+			
+			<script>
+				//document.getElementsByClassName("icon-md").classList.add('icon-twitter');
+			</script>
+		{% endfor %}
+		
+		
+		</div>
+	</div>
+</section><!--/#pricing-->
+{% endif %}

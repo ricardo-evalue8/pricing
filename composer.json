@@ -1,0 +1,42 @@
+{
+    "name": "evalue8/pricing",
+    "description": "This extension is a widget that will show pricing on your website.",
+    "type": "bolt-extension",
+	"version": "1.0.0",
+    "keywords": ["widget", "pricing", "social"],
+    "require": {
+        "bolt/bolt": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ricardo van de Rakt",
+            "email": "ricardo@evalue8.nl",
+			"homepage": "http://evalue8.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Bolt\\Extension\\evalue8\\pricing\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bolt\\Extension\\evalue8\\pricing\\Tests\\": "tests",
+            "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+        }
+    },
+    "extra": {
+		"bolt-icon": "pricing.png",
+        "bolt-assets": "web",
+        "bolt-class": "Bolt\\Extension\\evalue8\\pricing\\pricingExtension",
+		"bolt-screenshots": [
+            "/assets/screenshot1.png"
+        ]
+	}
+}
